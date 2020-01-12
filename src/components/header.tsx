@@ -14,8 +14,9 @@ export default () => (
         }
     `}
         render={data => (
-            <Helmet title={data.site.siteMetadata.title} defer={false} />
-
+            <>
+                <Helmet title={data.site.siteMetadata.title} defer={false} />
+            </>
         )}
     />
 )

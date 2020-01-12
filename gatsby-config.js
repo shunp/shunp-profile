@@ -1,16 +1,24 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
+const path = require(`path`)
 module.exports = {
   siteMetadata: {
     title: 'Shun\'s Profile',
+    siteUrl: `https://www.example.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-transformer-sharp`, 
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        stylesProvider: {
+          injectFirst: true,
+        },
+      },
+    },
+    `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-plugin-typescript`,
       options: {
@@ -25,7 +33,11 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-emotion`,
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
+      },
     },
   ]
 }
