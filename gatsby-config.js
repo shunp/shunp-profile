@@ -10,6 +10,7 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-transformer-sharp`, 
     `gatsby-plugin-sharp`,
+    `gatsby-theme-material-ui`,
     {
       resolve: `gatsby-plugin-material-ui`,
       options: {

@@ -1878,6 +1878,8 @@ export type SitePageFieldsEnum =
   'pluginCreator___name' |
   'pluginCreator___version' |
   'pluginCreator___pluginOptions___stylesProvider___injectFirst' |
+  'pluginCreator___pluginOptions___fonts___google' |
+  'pluginCreator___pluginOptions___modules' |
   'pluginCreator___pluginOptions___isTSX' |
   'pluginCreator___pluginOptions___allExtensions' |
   'pluginCreator___pluginOptions___fileName' |
@@ -2070,6 +2072,10 @@ export type SitePluginFieldsEnum =
   'name' |
   'version' |
   'pluginOptions___stylesProvider___injectFirst' |
+  'pluginOptions___fonts___google' |
+  'pluginOptions___fonts___google___family' |
+  'pluginOptions___fonts___google___variants' |
+  'pluginOptions___modules' |
   'pluginOptions___isTSX' |
   'pluginOptions___allExtensions' |
   'pluginOptions___fileName' |
@@ -2192,6 +2198,8 @@ export type SitePluginPackageJsonPeerDependenciesFilterListInput = {
 
 export type SitePluginPluginOptions = {
   stylesProvider?: Maybe<SitePluginPluginOptionsStylesProvider>,
+  fonts?: Maybe<SitePluginPluginOptionsFonts>,
+  modules?: Maybe<Array<Maybe<Scalars['String']>>>,
   isTSX?: Maybe<Scalars['Boolean']>,
   allExtensions?: Maybe<Scalars['Boolean']>,
   fileName?: Maybe<Scalars['String']>,
@@ -2202,12 +2210,36 @@ export type SitePluginPluginOptions = {
 
 export type SitePluginPluginOptionsFilterInput = {
   stylesProvider?: Maybe<SitePluginPluginOptionsStylesProviderFilterInput>,
+  fonts?: Maybe<SitePluginPluginOptionsFontsFilterInput>,
+  modules?: Maybe<StringQueryOperatorInput>,
   isTSX?: Maybe<BooleanQueryOperatorInput>,
   allExtensions?: Maybe<BooleanQueryOperatorInput>,
   fileName?: Maybe<StringQueryOperatorInput>,
   name?: Maybe<StringQueryOperatorInput>,
   path?: Maybe<StringQueryOperatorInput>,
   pathCheck?: Maybe<BooleanQueryOperatorInput>,
+};
+
+export type SitePluginPluginOptionsFonts = {
+  google?: Maybe<Array<Maybe<SitePluginPluginOptionsFontsGoogle>>>,
+};
+
+export type SitePluginPluginOptionsFontsFilterInput = {
+  google?: Maybe<SitePluginPluginOptionsFontsGoogleFilterListInput>,
+};
+
+export type SitePluginPluginOptionsFontsGoogle = {
+  family?: Maybe<Scalars['String']>,
+  variants?: Maybe<Array<Maybe<Scalars['String']>>>,
+};
+
+export type SitePluginPluginOptionsFontsGoogleFilterInput = {
+  family?: Maybe<StringQueryOperatorInput>,
+  variants?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePluginPluginOptionsFontsGoogleFilterListInput = {
+  elemMatch?: Maybe<SitePluginPluginOptionsFontsGoogleFilterInput>,
 };
 
 export type SitePluginPluginOptionsStylesProvider = {
