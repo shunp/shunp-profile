@@ -1,12 +1,14 @@
 import React from "react"
 import { Link } from 'gatsby'
 import { css } from "@emotion/core"
-import { baseStyle } from '../styles'
+import { baseStyle, cardStyle } from '../styles'
 import styled from '@emotion/styled'
 import Header from '../components/header'
 // import { Paper } from '@material-ui/core'
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
+import { makeStyles } from '@material-ui/core/styles';
+import StyledCard from '../components/card'
 
 const IndexPage = ({ className }) => (
     <>
@@ -14,7 +16,7 @@ const IndexPage = ({ className }) => (
         <Container maxWidth="md">
             <Paper variant="outlined">
             </Paper>
-            <main className={className}>
+            <main>
                 <h2> SHUMPEI KOIKE</h2>
                 <p>Welcome to my profile</p>
                 <p>This site is updating now.</p>
@@ -23,14 +25,13 @@ const IndexPage = ({ className }) => (
                     <Link to="/cv">CV</Link>
                 </p>
             </main>
+            <StyledCard/>
         </Container>
-
-
     </>
 )
 
 const LayoutIndexPage = styled(IndexPage)`
-    ${baseStyle}
+    ${cardStyle}
 `
 
 export default LayoutIndexPage
