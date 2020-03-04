@@ -3,6 +3,14 @@ import Container from '@material-ui/core/Container'
 import ButtonBase from '@material-ui/core/ButtonBase'
 import { withStyles } from '@material-ui/core/styles'
 import Typography from '../components/Typography'
+import BlockchainImg from '../images/blockchain.png'
+import CGImg from '../images/3dcg.png'
+import WebImg from '../images/web.png'
+import MLImg from '../images/ml.png'
+import CloudImg from '../images/cloud.png'
+import ProcessingImg from '../images/processing.png'
+import ARImg from '../images/ar.png'
+import DocumentImg from '../images/document.png'
 
 const styles = theme => ({
     root: {
@@ -87,57 +95,49 @@ function TechCategories(props) {
 
     const images = [
         {
-            url:
-                'https://images.unsplash.com/photo-1534081333815-ae5019106622?auto=format&fit=crop&w=400&q=80',
-            title: 'Snorkeling',
+            url: BlockchainImg,
+            title: 'Blockchain',
             width: '40%',
         },
         {
-            url:
-                'https://images.unsplash.com/photo-1531299204812-e6d44d9a185c?auto=format&fit=crop&w=400&q=80',
-            title: 'Massage',
+            url: CGImg,
+            title: '3D Graphics',
             width: '20%',
         },
         {
-            url:
-                'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=400&q=80',
-            title: 'Hiking',
+            url: WebImg,
+            title: 'Web Development',
             width: '40%',
         },
         {
-            url:
-                'https://images.unsplash.com/photo-1453747063559-36695c8771bd?auto=format&fit=crop&w=400&q=80',
-            title: 'Tour',
+            url: MLImg,
+            title: 'Machine Learning',
             width: '38%',
         },
         {
-            url:
-                'https://images.unsplash.com/photo-1523309996740-d5315f9cc28b?auto=format&fit=crop&w=400&q=80',
-            title: 'Gastronomy',
+            url: CloudImg,
+            title: 'System Architecture',
             width: '38%',
         },
         {
-            url:
-                'https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&w=400&q=80',
-            title: 'Shopping',
+            url: ProcessingImg,
+            title: 'Processing',
             width: '24%',
         },
         {
-            url:
-                'https://images.unsplash.com/photo-1506941433945-99a2aa4bd50a?auto=format&fit=crop&w=400&q=80',
-            title: 'Walking',
+            url: ARImg,
+            title: 'AR / VR',
             width: '40%',
         },
         {
-            url:
-                'https://images.unsplash.com/photo-1533727937480-da3a97967e95?auto=format&fit=crop&w=400&q=80',
-            title: 'Fitness',
+            url: DocumentImg,
+            title: 'CV',
             width: '20%',
         },
         {
             url:
                 'https://images.unsplash.com/photo-1518136247453-74e7b5265980?auto=format&fit=crop&w=400&q=80',
-            title: 'Reading',
+            title: 'Others',
             width: '40%',
         },
     ];

@@ -17,10 +17,10 @@ export default () => (
         <AppAppBar />
         <Hero />
         <TechCategories />
-        <Container maxWidth="md">
+        {/* <Container maxWidth="md">
             <TopCard title="Processing" explain="AAA" to="/processing" />
             <TopCard title="CV" explain="BBB" to="/cv" />
             <TopCard title="Landing" explain="CCC" to="/landing" />
-        </Container>
+        </Container> */}
     </>
 )

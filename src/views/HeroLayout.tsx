@@ -26,7 +26,7 @@ const styles = theme => ({
     }
 })
 
-function ProductHeroLayout(props) {
+function HeroLayout(props) {
     const { backgroundClassName, children, classes } = props
     return (
         <section>
@@ -39,4 +39,4 @@ function ProductHeroLayout(props) {
     )
 }
 
-export default withStyles(styles)(ProductHeroLayout)
+export default withStyles(styles)(HeroLayout)

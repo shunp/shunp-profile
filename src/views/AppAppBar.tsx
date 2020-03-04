@@ -12,7 +12,7 @@ const AppAppBar = () => {
                     underline="none"
                     color="inherit"
                 >
-                    {'SHUN / Shumpei Koike / 小池 駿平'}
+                    {/* {'SHUN / Shumpei Koike / 小池 駿平'} */}
                 </Link>
             </Toolbar>
         </AppBar>
