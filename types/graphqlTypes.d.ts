@@ -2291,7 +2291,7 @@ export type HeadingQueryQuery = { site: Maybe<{ siteMetadata: Maybe<Pick<SiteSit
 export type Unnamed_1_QueryVariables = {};
 
 
-export type Unnamed_1_Query = { file: Maybe<{ childImageSharp: Maybe<{ fixed: Maybe<GatsbyImageSharpFixedFragment> }> }> };
+export type Unnamed_1_Query = { file: Maybe<{ childImageSharp: Maybe<{ fixed: Maybe<GatsbyImageSharpFixedFragment> }> }>, imageOne: Maybe<{ childImageSharp: Maybe<{ fluid: Maybe<Pick<ImageSharpFluid, 'base64' | 'tracedSVG' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes' | 'originalImg' | 'originalName'>> }> }> };
 
 export type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 

@@ -15,6 +15,8 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@material-ui/icons": "^4.9.1",
+    "@types/react-helmet": "^5.0.15",
     "gatsby": "^2.18.12",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
@@ -28,8 +30,15 @@
     "@types/p5": "^0.9.0",
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.3",
     "gatsby-image": "^2.2.38",
     "gatsby-plugin-emotion": "^4.1.21",
+    "gatsby-plugin-eslint": "^2.0.8",
     "gatsby-plugin-graphql-codegen": "^2.1.1",
     "gatsby-plugin-material-ui": "^2.1.6",
     "gatsby-plugin-netlify": "^2.1.31",
@@ -37,6 +46,7 @@
     "gatsby-plugin-sharp": "^2.3.13",
     "gatsby-plugin-sitemap": "^2.2.25",
     "gatsby-plugin-typescript": "^2.1.26",
+    "gatsby-plugin-typescript-checker": "^1.1.1",
     "gatsby-source-filesystem": "^2.1.46",
     "gatsby-theme-material-ui": "^1.0.6",
     "gatsby-transformer-sharp": "^2.3.12",
