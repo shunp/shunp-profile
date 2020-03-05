@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: 'Shun\'s Profile',
+    title: 'SHUN / 小池駿平',
     siteUrl: 'https://www.example.com',
   },
   plugins: [

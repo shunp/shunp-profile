@@ -13,7 +13,7 @@ const styles = theme => ({
 
 export default ({ data }) => (
     <>
-        {/* <Header /> */}
+        <Header />
         <AppAppBar />
         <Hero />
         <TechCategories url={data} />
