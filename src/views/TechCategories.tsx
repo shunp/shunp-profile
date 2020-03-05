@@ -3,14 +3,6 @@ import Container from '@material-ui/core/Container'
 import ButtonBase from '@material-ui/core/ButtonBase'
 import { withStyles } from '@material-ui/core/styles'
 import Typography from '../components/Typography'
-import BlockchainImg from '../images/blockchain.png'
-import CGImg from '../images/3dcg.png'
-import WebImg from '../images/web.png'
-import MLImg from '../images/ml.png'
-import CloudImg from '../images/cloud.png'
-import ProcessingImg from '../images/processing.png'
-import ARImg from '../images/ar.png'
-import DocumentImg from '../images/document.png'
 
 const styles = theme => ({
     root: {
@@ -91,55 +83,48 @@ const styles = theme => ({
 })
 
 function TechCategories(props) {
-    const { classes } = props;
-
+    const { classes,url } = props;
     const images = [
         {
-            url: BlockchainImg,
+            url: url.blockchain.childImageSharp.fixed.src,
             title: 'Blockchain',
             width: '40%',
         },
         {
-            url: CGImg,
+            url: url.cg.childImageSharp.fixed.src,
             title: '3D Graphics',
             width: '20%',
         },
         {
-            url: WebImg,
+            url: url.web.childImageSharp.fixed.src,
             title: 'Web Development',
             width: '40%',
         },
         {
-            url: MLImg,
+            url: url.ml.childImageSharp.fixed.src,
             title: 'Machine Learning',
             width: '38%',
         },
         {
-            url: CloudImg,
+            url: url.cloud.childImageSharp.fixed.src,
             title: 'System Architecture',
             width: '38%',
         },
         {
-            url: ProcessingImg,
+            url: url.processing.childImageSharp.fixed.src,
             title: 'Processing',
             width: '24%',
         },
         {
-            url: ARImg,
+            url: url.ar.childImageSharp.fixed.src,
             title: 'AR / VR',
             width: '40%',
         },
         {
-            url: DocumentImg,
+            url: url.document.childImageSharp.fixed.src,
             title: 'CV',
             width: '20%',
-        },
-        {
-            url:
-                'https://images.unsplash.com/photo-1518136247453-74e7b5265980?auto=format&fit=crop&w=400&q=80',
-            title: 'Others',
-            width: '40%',
-        },
+        }
     ];
     return (
         <Container className={classes.root} component="section">
