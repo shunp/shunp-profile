@@ -12,25 +12,23 @@ const styles = theme => ({
 
 
 export default ({ data }) => (
-    <>
-        <Header />
-        <AppAppBar />
-        <Hero />
-        <TechCategories url={data} />
-        {/* <Container maxWidth="md">
+  <>
+    <Header />
+    <AppAppBar />
+    <Hero url={data} />
+    <TechCategories url={data} />
+    {/* <Container maxWidth="md">
             <TopCard title="Processing" explain="AAA" to="/processing" />
             <TopCard title="CV" explain="BBB" to="/cv" />
             <TopCard title="Landing" explain="CCC" to="/landing" />
         </Container> */}
-    </>
+  </>
 )
 
 export const query = graphql`
   query {
     blockchain:file(relativePath: { eq: "blockchain.png" }) {
       childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
         fixed(width: 500, height: 100) {
           ...GatsbyImageSharpFixed
         }
@@ -38,8 +36,6 @@ export const query = graphql`
     }
     cg:file(relativePath: { eq: "3dcg.png" }) {
         childImageSharp {
-          # Specify the image processing specifications right in the query.
-          # Makes it trivial to update as your page's design changes.
           fixed(width: 500, height: 100) {
             ...GatsbyImageSharpFixed
           }
@@ -47,8 +43,6 @@ export const query = graphql`
     }
     web:file(relativePath: { eq: "web.png" }) {
         childImageSharp {
-          # Specify the image processing specifications right in the query.
-          # Makes it trivial to update as your page's design changes.
           fixed(width: 500, height: 100) {
             ...GatsbyImageSharpFixed
           }
@@ -56,8 +50,6 @@ export const query = graphql`
     }
     ml:file(relativePath: { eq: "ml.png" }) {
         childImageSharp {
-          # Specify the image processing specifications right in the query.
-          # Makes it trivial to update as your page's design changes.
           fixed(width: 500, height: 100) {
             ...GatsbyImageSharpFixed
           }
@@ -65,8 +57,6 @@ export const query = graphql`
     }
     cloud:file(relativePath: { eq: "cloud.png" }) {
         childImageSharp {
-          # Specify the image processing specifications right in the query.
-          # Makes it trivial to update as your page's design changes.
           fixed(width: 500, height: 100) {
             ...GatsbyImageSharpFixed
           }
@@ -74,8 +64,6 @@ export const query = graphql`
     }
     processing:file(relativePath: { eq: "processing.png" }) {
         childImageSharp {
-          # Specify the image processing specifications right in the query.
-          # Makes it trivial to update as your page's design changes.
           fixed(width: 500, height: 100) {
             ...GatsbyImageSharpFixed
           }
@@ -83,8 +71,6 @@ export const query = graphql`
     }
     ar:file(relativePath: { eq: "ar.png" }) {
         childImageSharp {
-          # Specify the image processing specifications right in the query.
-          # Makes it trivial to update as your page's design changes.
           fixed(width: 500, height: 100) {
             ...GatsbyImageSharpFixed
           }
@@ -92,9 +78,21 @@ export const query = graphql`
     }
     document:file(relativePath: { eq: "document.png" }) {
         childImageSharp {
-          # Specify the image processing specifications right in the query.
-          # Makes it trivial to update as your page's design changes.
           fixed(width: 500, height: 100) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+    }
+    background:file(relativePath: { eq: "background.jpg" }) {
+        childImageSharp {
+          fixed(width: 500, height: 500) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+    }
+    person:file(relativePath: { eq: "person.png" }) {
+        childImageSharp {
+          fixed(width: 500, height: 1500) {
             ...GatsbyImageSharpFixed
           }
         }
