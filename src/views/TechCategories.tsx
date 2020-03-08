@@ -3,6 +3,8 @@ import Container from '@material-ui/core/Container'
 import ButtonBase from '@material-ui/core/ButtonBase'
 import { withStyles } from '@material-ui/core/styles'
 import Typography from '../components/Typography'
+import Drawer from '@material-ui/core/Drawer'
+import Divider from '@material-ui/core/Divider';
 
 const styles = theme => ({
     root: {
@@ -83,7 +85,8 @@ const styles = theme => ({
 })
 
 function TechCategories(props) {
-    const { classes,url } = props;
+    const { classes, url } = props
+    const [drawer, setDrawer] = React.useState(false)
     const images = [
         {
             url: url.blockchain.childImageSharp.fixed.src,
@@ -125,7 +128,28 @@ function TechCategories(props) {
             title: 'CV',
             width: '20%',
         }
-    ];
+    ]
+
+    const toggleDrawer = (open: boolean) => (
+        event: React.KeyboardEvent | React.MouseEvent,
+    ) => {
+        if (
+            event.type === 'keydown' &&
+            ((event as React.KeyboardEvent).key === 'Tab' ||
+                (event as React.KeyboardEvent).key === 'Shift')
+        ) {
+            return
+        }
+        setDrawer(open)
+    }
+
+    const drawerContent = () => (
+        <div onClick={toggleDrawer(false)}>
+            XXX
+            <Divider />
+        </div>
+    )
+
     return (
         <Container className={classes.root} component="section">
             <div className={classes.images}>
@@ -136,6 +160,7 @@ function TechCategories(props) {
                         style={{
                             width: image.width,
                         }}
+                        onClick={toggleDrawer(true)}
                     >
                         <div
                             className={classes.imageSrc}
@@ -158,6 +183,9 @@ function TechCategories(props) {
                     </ButtonBase>
                 ))}
             </div>
+            <Drawer anchor="bottom" open={drawer} onClose={toggleDrawer(false)}>
+                {drawerContent()}
+            </Drawer>
         </Container>
     )
 }
