@@ -58,5 +58,11 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     'gatsby-plugin-robots-txt',
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'en',
+      },
+    },
   ],
 };
