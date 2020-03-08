@@ -1,27 +1,32 @@
 import React from "react"
 import Header from '../components/header'
 import Hero from '../views/Hero'
-import Container from '@material-ui/core/Container'
-import { Toolbar, Link } from "@material-ui/core"
 import TechCategories from '../views/TechCategories'
 import AppAppBar from "../views/AppAppBar"
 import { graphql } from "gatsby"
 
-const styles = theme => ({
-})
 
+interface Props {
+  data: {
+    blockchain: string,
+    cg: string,
+    web: string,
+    ml: string,
+    cloud: string,
+    processing: string,
+    ar: string,
+    document: string,
+    background: string,
+    person: string
+  }
+}
 
-export default ({ data }) => (
+export default ({ data }: Props) => (
   <>
     <Header />
     <AppAppBar />
     <Hero url={data} />
     <TechCategories url={data} />
-    {/* <Container maxWidth="md">
-            <TopCard title="Processing" explain="AAA" to="/processing" />
-            <TopCard title="CV" explain="BBB" to="/cv" />
-            <TopCard title="Landing" explain="CCC" to="/landing" />
-        </Container> */}
   </>
 )
 

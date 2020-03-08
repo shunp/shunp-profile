@@ -1889,6 +1889,7 @@ export type SitePageFieldsEnum =
   'pluginCreator___pluginOptions___start_url' |
   'pluginCreator___pluginOptions___description' |
   'pluginCreator___pluginOptions___lang' |
+  'pluginCreator___pluginOptions___icon' |
   'pluginCreator___pluginOptions___background_color' |
   'pluginCreator___pluginOptions___theme_color' |
   'pluginCreator___pluginOptions___display' |
@@ -2092,6 +2093,7 @@ export type SitePluginFieldsEnum =
   'pluginOptions___start_url' |
   'pluginOptions___description' |
   'pluginOptions___lang' |
+  'pluginOptions___icon' |
   'pluginOptions___background_color' |
   'pluginOptions___theme_color' |
   'pluginOptions___display' |
@@ -2223,6 +2225,7 @@ export type SitePluginPluginOptions = {
   start_url?: Maybe<Scalars['String']>,
   description?: Maybe<Scalars['String']>,
   lang?: Maybe<Scalars['String']>,
+  icon?: Maybe<Scalars['String']>,
   background_color?: Maybe<Scalars['String']>,
   theme_color?: Maybe<Scalars['String']>,
   display?: Maybe<Scalars['String']>,
@@ -2242,6 +2245,7 @@ export type SitePluginPluginOptionsFilterInput = {
   start_url?: Maybe<StringQueryOperatorInput>,
   description?: Maybe<StringQueryOperatorInput>,
   lang?: Maybe<StringQueryOperatorInput>,
+  icon?: Maybe<StringQueryOperatorInput>,
   background_color?: Maybe<StringQueryOperatorInput>,
   theme_color?: Maybe<StringQueryOperatorInput>,
   display?: Maybe<StringQueryOperatorInput>,

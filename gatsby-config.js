@@ -49,6 +49,7 @@ module.exports = {
         start_url: '/',
         description: 'This application describes the personal skill and motication.',
         lang: 'en',
+        icon: 'src/images/person.png',
         background_color: '#f7f0eb',
         theme_color: '#a2466c',
         display: 'standalone',

@@ -8,11 +8,11 @@ const AppAppBar = () => {
         <AppBar>
             <Toolbar>
                 <Link
-                    variant="h6"
+                    variant="subtitle1"
                     underline="none"
-                    color="inherit"
+                    color="secondary"
                 >
-                    {/* {'SHUN / Shumpei Koike / 小池 駿平'} */}
+                    Introduction
                 </Link>
             </Toolbar>
         </AppBar>

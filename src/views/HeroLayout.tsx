@@ -27,13 +27,17 @@ const styles = theme => ({
 })
 
 function HeroLayout(props) {
-    const { backgroundClassName, children, classes } = props
+    const { backgroundClassName, backgroundUrl, children, classes } = props
     return (
         <section>
             <Container>
                 {children}
                 <div className={classes.backdrop} />
-                <div className={clsx(classes.background, backgroundClassName)} />
+                <div
+                    className={clsx(classes.background, backgroundClassName)}
+                    style={{
+                        backgroundImage: `url(${backgroundUrl})`,
+                    }} />
             </Container>
         </section>
     )
