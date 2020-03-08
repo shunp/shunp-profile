@@ -9,6 +9,7 @@ export default () => (
             site {
                 siteMetadata {
                     title
+                    description
                 }
             }
         }
@@ -17,6 +18,7 @@ export default () => (
             <>
                 <Helmet>
                     <meta charSet="utf-8" />
+                    <meta name="description" content={data.site.siteMetadata.description} />
                     <title>{data.site.siteMetadata.title} </title>
                 </Helmet>
             </>

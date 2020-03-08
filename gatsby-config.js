@@ -4,6 +4,7 @@ module.exports = {
   siteMetadata: {
     title: 'SHUN / 小池駿平',
     siteUrl: 'https://www.example.com',
+    description: 'This is the personal introduction site.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -56,5 +57,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    'gatsby-plugin-robots-txt',
   ],
 };
