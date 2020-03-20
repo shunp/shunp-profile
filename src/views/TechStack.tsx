@@ -84,53 +84,76 @@ const styles = theme => ({
     },
 })
 
-function TechCategories(props) {
-    const { classes, url } = props
-    const [drawer, setDrawer] = React.useState(false)
-    const images = [
+interface TechCatalog {
+    seq: number,
+    imageUrl?: string,
+    title: string,
+    width: string
+}
+
+const newTechCatalog = (url) => {
+    const techCatalogs: TechCatalog[] = [
         {
-            url: url.blockchain.childImageSharp.fixed.src,
+            seq: 0,
+            imageUrl: url.blockchain.childImageSharp.fixed.src,
             title: 'Blockchain',
             width: '40%',
         },
         {
-            url: url.cg.childImageSharp.fixed.src,
+            seq: 1,
+            imageUrl: url.cg.childImageSharp.fixed.src,
             title: '3D Graphics',
             width: '20%',
         },
         {
-            url: url.web.childImageSharp.fixed.src,
+            seq: 2,
+            imageUrl: url.web.childImageSharp.fixed.src,
             title: 'Web Development',
             width: '40%',
         },
         {
-            url: url.ml.childImageSharp.fixed.src,
+            seq: 3,
+            imageUrl: url.ml.childImageSharp.fixed.src,
             title: 'Machine Learning',
             width: '38%',
         },
         {
-            url: url.cloud.childImageSharp.fixed.src,
+            seq: 4,
+            imageUrl: url.cloud.childImageSharp.fixed.src,
             title: 'System Architecture',
             width: '38%',
         },
         {
-            url: url.processing.childImageSharp.fixed.src,
+            seq: 5,
+            imageUrl: url.processing.childImageSharp.fixed.src,
             title: 'Processing',
             width: '24%',
         },
         {
-            url: url.ar.childImageSharp.fixed.src,
+            seq: 6,
+            imageUrl: url.ar.childImageSharp.fixed.src,
             title: 'AR / VR',
             width: '40%',
         },
         {
-            url: url.document.childImageSharp.fixed.src,
+            seq: 7,
+            imageUrl: url.document.childImageSharp.fixed.src,
             title: 'CV',
             width: '20%',
         }
     ]
+    return techCatalogs
+}
 
-    const toggleDrawer = (open: boolean) => (
+const TechStack = (props) => {
+    const { classes, url } = props
+    const [drawer, setDrawer] = React.useState(false)
+    const [index, setIndex] = React.useState(0)
+    const techCatalogs = newTechCatalog(url)
+    const [catalogs, setCatalogs] = React.useState<TechCatalog[]>(techCatalogs)
+    // setCatalogs(techCatalogs)
+    console.log(catalogs[0])
+    const toggleDrawer = (open: boolean, index?: number) => (
         event: React.KeyboardEvent | React.MouseEvent,
     ) => {
         if (
@@ -141,11 +164,16 @@ function TechCategories(props) {
             return
         }
         setDrawer(open)
+        if (index) {
+            setIndex(index)
+        }
     }
 
     const drawerContent = () => (
         <div onClick={toggleDrawer(false)}>
             XXX
+            {index}
+            {catalogs[index].title}
             <Divider />
         </div>
     )
@@ -153,19 +181,19 @@ function TechCategories(props) {
     return (
         <Container className={classes.root} component="section">
             <div className={classes.images}>
-                {images.map(image => (
+                {techCatalogs.map((catalog, i) => (
                     <ButtonBase
-                        key={image.title}
+                        key={catalog.title}
                         className={classes.imageWrapper}
                         style={{
-                            width: image.width,
+                            width: catalog.width,
                         }}
-                        onClick={toggleDrawer(true)}
+                        onClick={toggleDrawer(true, i)}
                     >
                         <div
                             className={classes.imageSrc}
                             style={{
-                                backgroundImage: `url(${image.url})`,
+                                backgroundImage: `url(${catalog.imageUrl})`,
                             }}
                         />
                         <div className={classes.imageBackdrop} />
@@ -176,7 +204,7 @@ function TechCategories(props) {
                                 color="inherit"
                                 className={classes.imageTitle}
                             >
-                                {image.title}
+                                {catalog.title}
                                 <div className={classes.imageMarked} />
                             </Typography>
                         </div>
@@ -189,4 +217,4 @@ function TechCategories(props) {
         </Container>
     )
 }
-export default withStyles(styles)(TechCategories)
+export default withStyles(styles)(TechStack)

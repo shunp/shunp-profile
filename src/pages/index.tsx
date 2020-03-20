@@ -1,7 +1,7 @@
 import React from "react"
 import Header from '../components/header'
 import Hero from '../views/Hero'
-import TechCategories from '../views/TechCategories'
+import TechCategories from '../views/TechStack'
 import AppAppBar from "../views/AppAppBar"
 import { graphql } from "gatsby"
 
