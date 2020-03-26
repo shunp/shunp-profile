@@ -4,7 +4,10 @@ import ButtonBase from '@material-ui/core/ButtonBase'
 import { withStyles } from '@material-ui/core/styles'
 import Typography from '../components/Typography'
 import Drawer from '@material-ui/core/Drawer'
-import Divider from '@material-ui/core/Divider';
+import Divider from '@material-ui/core/Divider'
+
+import BaseScene from '../three/BaseScene'
+import BlockchainAnimationScene from '../three/BlockchainAnimationScene'
 
 const styles = theme => ({
     root: {
@@ -97,54 +100,55 @@ const newTechCatalog = (url) => {
             seq: 0,
             imageUrl: url.blockchain.childImageSharp.fixed.src,
             title: 'Blockchain',
-            width: '40%',
+            width: '50%',
         },
         {
             seq: 1,
             imageUrl: url.cg.childImageSharp.fixed.src,
             title: '3D Graphics',
-            width: '20%',
+            width: '50%',
         },
         {
             seq: 2,
             imageUrl: url.web.childImageSharp.fixed.src,
             title: 'Web Development',
-            width: '40%',
+            width: '50%',
         },
         {
             seq: 3,
             imageUrl: url.ml.childImageSharp.fixed.src,
             title: 'Machine Learning',
-            width: '38%',
+            width: '50%',
         },
         {
             seq: 4,
             imageUrl: url.cloud.childImageSharp.fixed.src,
             title: 'System Architecture',
-            width: '38%',
+            width: '50%',
         },
         {
             seq: 5,
             imageUrl: url.processing.childImageSharp.fixed.src,
             title: 'Processing',
-            width: '24%',
+            width: '50%',
         },
         {
             seq: 6,
             imageUrl: url.ar.childImageSharp.fixed.src,
             title: 'AR / VR',
-            width: '40%',
+            width: '50%',
         },
         {
             seq: 7,
             imageUrl: url.document.childImageSharp.fixed.src,
             title: 'CV',
-            width: '20%',
+            width: '50%',
         }
     ]
     return techCatalogs
 }
 
+// TODO: devide
 const TechStack = (props) => {
     const { classes, url } = props
     const [drawer, setDrawer] = React.useState(false)
@@ -164,52 +168,130 @@ const TechStack = (props) => {
             return
         }
         setDrawer(open)
-        if (index) {
+        console.log(index)
+        if (index !== undefined) {
             setIndex(index)
         }
     }
 
-    const drawerContent = () => (
-        <div onClick={toggleDrawer(false)}>
-            XXX
-            {index}
-            {catalogs[index].title}
-            <Divider />
-        </div>
-    )
+    // TODO: devide
+    const drawerContent = () => {
+        if (index == 0) {
+            return (
+                <div onClick={toggleDrawer(false)}>
+                    <Typography
+                        component="h3"
+                        variant="h4"
+                        color="inherit"
+                        className={classes.imageTitle}
+                    >
+                        Blockchain Development
+                        </Typography>
+                    <Typography
+                        component="h3"
+                        variant="h6"
+                        color="inherit"
+                        className={classes.imageTitle}
+                    >
+                        Will support developing smart contracts on the blockchain.
+                        </Typography>
+                    <Typography
+                        component="h3"
+                        variant="h6"
+                        color="inherit"
+                        className={classes.imageTitle}
+                    >
+                        Will design the whole architecture how to build your system with blockchain.
+                        </Typography>
+                    <Divider />
+                    <BlockchainAnimationScene />
+                </div>
+            )
+        } else {
+            return (
+                <div onClick={toggleDrawer(false)}>
+                    XXX
+                    {index}
+                    {catalogs[index].title}
+                    <Divider />
+                    <BaseScene />
+                </div>
+            )
+        }
+    }
+
+
+    const Blockchain = (props) => {
+        const { classes, catalogs } = props
+        return (
+            <ButtonBase
+                key={catalogs[0].title}
+                className={classes.imageWrapper}
+                style={{
+                    width: catalogs[0].width,
+                }}
+                onClick={toggleDrawer(true, 0)}
+            >
+                <div
+                    className={classes.imageSrc}
+                    style={{
+                        backgroundImage: `url(${catalogs[0].imageUrl})`,
+                    }}
+                />
+                <div className={classes.imageBackdrop} />
+                <div className={classes.imageButton}>
+                    <Typography
+                        component="h3"
+                        variant="h6"
+                        color="inherit"
+                        className={classes.imageTitle}
+                    >
+                        {catalogs[0].title}
+                        <div className={classes.imageMarked} />
+                    </Typography>
+                </div>
+            </ButtonBase>
+        )
+    }
+
+    const Graphics = (props) => {
+        const { classes, catalogs } = props
+        return (
+            <ButtonBase
+                key={catalogs[1].title}
+                className={classes.imageWrapper}
+                style={{
+                    width: catalogs[1].width,
+                }}
+                onClick={toggleDrawer(true, 1)}
+            >
+                <div
+                    className={classes.imageSrc}
+                    style={{
+                        backgroundImage: `url(${catalogs[1].imageUrl})`,
+                    }}
+                />
+                <div className={classes.imageBackdrop} />
+                <div className={classes.imageButton}>
+                    <Typography
+                        component="h3"
+                        variant="h6"
+                        color="inherit"
+                        className={classes.imageTitle}
+                    >
+                        {catalogs[1].title}
+                        <div className={classes.imageMarked} />
+                    </Typography>
+                </div>
+            </ButtonBase>
+        )
+    }
 
     return (
         <Container className={classes.root} component="section">
             <div className={classes.images}>
-                {techCatalogs.map((catalog, i) => (
-                    <ButtonBase
-                        key={catalog.title}
-                        className={classes.imageWrapper}
-                        style={{
-                            width: catalog.width,
-                        }}
-                        onClick={toggleDrawer(true, i)}
-                    >
-                        <div
-                            className={classes.imageSrc}
-                            style={{
-                                backgroundImage: `url(${catalog.imageUrl})`,
-                            }}
-                        />
-                        <div className={classes.imageBackdrop} />
-                        <div className={classes.imageButton}>
-                            <Typography
-                                component="h3"
-                                variant="h6"
-                                color="inherit"
-                                className={classes.imageTitle}
-                            >
-                                {catalog.title}
-                                <div className={classes.imageMarked} />
-                            </Typography>
-                        </div>
-                    </ButtonBase>
-                ))}
+                <Blockchain classes={classes} catalogs={catalogs} />
+                <Graphics classes={classes} catalogs={catalogs} />
             </div>
             <Drawer anchor="bottom" open={drawer} onClose={toggleDrawer(false)}>
                 {drawerContent()}
