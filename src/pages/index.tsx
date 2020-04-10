@@ -5,6 +5,10 @@ import TechCategories from '../views/TechStack'
 import AppAppBar from "../views/AppAppBar"
 import { graphql } from "gatsby"
 import TopScene from '../three/scene/TopScene'
+import BlockchainScene from "../three/scene/BlockchainScene"
+import XRScene from "../three/scene/XRScene"
+import ProfileScene from "../three/scene/ProfileScene"
+import Img from 'gatsby-image'
 
 interface Props {
   data: {
@@ -23,78 +27,22 @@ interface Props {
 
 export default ({ data }: Props) => (
   <>
-    <TopScene />
     <Header />
-    <AppAppBar />
-    {/* <Hero url={data} /> */}
-    {/* <TechCategories url={data} /> */}
+    <TopScene />
+    <BlockchainScene />
+    <XRScene />
+    <ProfileScene images={data.profile.childImageSharp.fixed} />
   </>
 )
 
 export const query = graphql`
   query {
-    blockchain:file(relativePath: { eq: "blockchain.png" }) {
+    profile:file(relativePath: { eq: "profile.jpg" }) {
       childImageSharp {
-        fixed(width: 500, height: 100) {
+        fixed(width: 400, height: 300) {
           ...GatsbyImageSharpFixed
         }
       }
-    }
-    cg:file(relativePath: { eq: "3dcg.png" }) {
-        childImageSharp {
-          fixed(width: 500, height: 100) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-    }
-    web:file(relativePath: { eq: "web.png" }) {
-        childImageSharp {
-          fixed(width: 500, height: 100) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-    }
-    ml:file(relativePath: { eq: "ml.png" }) {
-        childImageSharp {
-          fixed(width: 500, height: 100) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-    }
-    cloud:file(relativePath: { eq: "cloud.png" }) {
-        childImageSharp {
-          fixed(width: 500, height: 100) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-    }
-    processing:file(relativePath: { eq: "processing.png" }) {
-        childImageSharp {
-          fixed(width: 500, height: 100) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-    }
-    ar:file(relativePath: { eq: "ar.png" }) {
-        childImageSharp {
-          fixed(width: 500, height: 100) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-    }
-    document:file(relativePath: { eq: "document.png" }) {
-        childImageSharp {
-          fixed(width: 500, height: 100) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-    }
-    background:file(relativePath: { eq: "background.jpg" }) {
-        childImageSharp {
-          fixed(width: 500, height: 500) {
-            ...GatsbyImageSharpFixed
-          }
-        }
     }
     person:file(relativePath: { eq: "person.png" }) {
         childImageSharp {

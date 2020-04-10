@@ -65,5 +65,13 @@ module.exports = {
         lang: 'en',
       },
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/ // See below to configure properly
+        }
+      }
+    },
   ],
 };
