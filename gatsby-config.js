@@ -22,6 +22,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-emotion',
+    'gatsby-plugin-postcss',
     {
       resolve: 'gatsby-plugin-typescript',
       options: {

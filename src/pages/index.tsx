@@ -4,7 +4,7 @@ import Hero from '../views/Hero'
 import TechCategories from '../views/TechStack'
 import AppAppBar from "../views/AppAppBar"
 import { graphql } from "gatsby"
-
+import TopScene from '../three/scene/TopScene'
 
 interface Props {
   data: {
@@ -23,10 +23,11 @@ interface Props {
 
 export default ({ data }: Props) => (
   <>
+    <TopScene />
     <Header />
     <AppAppBar />
-    <Hero url={data} />
-    <TechCategories url={data} />
+    {/* <Hero url={data} /> */}
+    {/* <TechCategories url={data} /> */}
   </>
 )
 
@@ -102,5 +103,5 @@ export const query = graphql`
           }
         }
     }
-}  
+}
 `
