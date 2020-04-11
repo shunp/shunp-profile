@@ -40,10 +40,10 @@ const BlockchainScene = () => {
   const mount = createRef<HTMLInputElement>()
   let mouseX = 0
   let mouseY = 0
-  let windowHalfX = window.innerWidth / 2
-  let windowHalfY = window.innerHeight / 2
 
   useEffect(() => {
+    let windowHalfX = window.innerWidth / 2
+    let windowHalfY = window.innerHeight / 2
     const scene = new THREE.Scene()
     const camera = createDefaultCamera()
     const renderer = createDefaultRenderer(mount)
