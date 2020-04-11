@@ -11,6 +11,10 @@ import GitHub from '../../../assets/github.svg'
 import Qiita from '../../../assets/qiita.svg'
 import Speakerdeck from '../../../assets/speakerdeck.svg'
 
+const clickable = css`
+  cursor: pointer;
+`
+
 const profileFrame = css`
   display: inline-block;
   position: relative;
@@ -180,7 +184,7 @@ const ProfileScene = (props) => {
         <div className="flex content-center flex-wrap h-48">
           <div className="w-1/3 p-2 h-48">
           </div>
-          <div className="w-1/3 pt-48 h-48">
+          <div className="w-1/3 pt-48 h-48 max-w-md mx-auto">
             <Img fixed={props.images} css={profileFrame} className="bg-no-repeat content-center bg-gray-400 w-24 h-24" />
           </div>
           <div className="w-1/3 p-2 h-48">
@@ -191,30 +195,30 @@ const ProfileScene = (props) => {
         <div className="flex content-center flex-wrap h-48 pt-48">
           <div className="w-1/12 p-2" />
           <div className="w-1/12 p-2" />
-          <div className="w-1/12 p-2">
-            <Linkedin />
-          </div>
-          <div className="w-1/12 p-2">
-            <Facebook />
-          </div>
-          <div className="w-1/12 p-2">
-            <Twitter />
-          </div>
-          <div className="w-1/12 p-2">
-            <Youtube />
-          </div>
-          <div className="w-1/12 p-2">
-            <Instagram />
-          </div>
-          <div className="w-1/12 p-2">
-            <GitHub />
-          </div>
-          <div className="w-1/12 p-2">
-            <Qiita />
-          </div>
-          <div className="w-1/12 p-2">
-            <Speakerdeck />
-          </div>
+          <a className="w-1/12 p-2" target="_blank" href="https://www.linkedin.com/in/%E9%A7%BF%E5%B9%B3-%E5%B0%8F%E6%B1%A0-24aa4a161/?locale=en_US">
+            <Linkedin className="hover:bg-gray-400 focus:outline-none shadow-lg" />
+          </a>
+          <a className="w-1/12 p-2" target="_blank" href="https://www.facebook.com/shunpei.koike.9">
+            <Facebook className="hover:bg-gray-400 focus:outline-none shadow-lg" />
+          </a>
+          <a className="w-1/12 p-2" target="_blank" href="https://twitter.com/shunpei42ba_">
+            <Twitter className="hover:bg-gray-400 focus:outline-none shadow-lg" />
+          </a>
+          <a className="w-1/12 p-2" target="_blank" href="https://www.youtube.com/watch?v=WlkWTye4mfI&t=1s">
+            <Youtube className="hover:bg-gray-400 focus:outline-none shadow-lg" />
+          </a>
+          <a className="w-1/12 p-2" target="_blank" href="https://www.instagram.com/shunpeikoike/">
+            <Instagram className="hover:bg-gray-400 focus:outline-none shadow-lg" />
+          </a>
+          <a className="w-1/12 p-2" target="_blank" href="https://github.com/shunp">
+            <GitHub className="hover:bg-gray-400 focus:outline-none shadow-lg" />
+          </a>
+          <a className="w-1/12 p-2" target="_blank" href="https://qiita.com/shunp">
+            <Qiita className="hover:bg-gray-400 focus:outline-none shadow-lg" />
+          </a>
+          <a className="w-1/12 p-2" target="_blank" href="https://speakerdeck.com/shunp">
+            <Speakerdeck className="hover:bg-gray-400 focus:outline-none shadow-lg" />
+          </a>
           <div className="w-1/12 p-2" />
           <div className="w-1/12 p-2" />
         </div>
