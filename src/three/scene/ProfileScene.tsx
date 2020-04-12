@@ -11,10 +11,6 @@ import GitHub from '../../../assets/github.svg'
 import Qiita from '../../../assets/qiita.svg'
 import Speakerdeck from '../../../assets/speakerdeck.svg'
 
-const clickable = css`
-  cursor: pointer;
-`
-
 const profileFrame = css`
   display: inline-block;
   position: relative;
@@ -75,50 +71,6 @@ const createDefaultRenderer = (mount: React.RefObject<HTMLInputElement>) => {
     mount.current.appendChild(renderer.domElement)
   }
   return renderer
-}
-
-const createOuterIcosahedron = () => {
-  const geometry = new THREE.IcosahedronGeometry(7, 1)
-  const material = new THREE.MeshPhongMaterial({
-    color: 0xffffff,
-    wireframe: true,
-    side: THREE.DoubleSide
-  })
-  const mesh = new THREE.Mesh(geometry, material)
-  mesh.scale.x = 16
-  mesh.scale.y = 16
-  mesh.scale.z = 16
-  return mesh
-}
-
-const createIcosahedron = () => {
-  const geometry = new THREE.IcosahedronGeometry(3, 1)
-  const material = new THREE.MeshPhongMaterial({
-    color: 0xffffff,
-    flatShading: true
-  })
-  const mesh = new THREE.Mesh(geometry, material)
-  mesh.scale.x = 16
-  mesh.scale.y = 16
-  mesh.scale.z = 16
-  return mesh
-}
-
-const createParticles = () => {
-  const particles = new THREE.Object3D()
-  const material = new THREE.MeshPhongMaterial({
-    color: 0xffffff,
-    flatShading: true
-  })
-  const geometry = new THREE.TetrahedronGeometry(2, 0)
-  for (let i = 0; i < 1000; i++) {
-    const mesh = new THREE.Mesh(geometry, material)
-    mesh.position.set(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5).normalize()
-    mesh.position.multiplyScalar(90 + Math.random() * 700)
-    mesh.rotation.set(Math.random() * 2, Math.random() * 2, Math.random() * 2)
-    particles.add(mesh)
-  }
-  return particles
 }
 
 const ProfileScene = (props) => {

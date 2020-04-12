@@ -1,37 +1,40 @@
 import React from "react"
 import Header from '../components/header'
-import Hero from '../views/Hero'
-import TechCategories from '../views/TechStack'
-import AppAppBar from "../views/AppAppBar"
 import { graphql } from "gatsby"
 import TopScene from '../three/scene/TopScene'
 import BlockchainScene from "../three/scene/BlockchainScene"
 import XRScene from "../three/scene/XRScene"
 import ProfileScene from "../three/scene/ProfileScene"
-import Img from 'gatsby-image'
-
+import "../styles/base.css"
 interface Props {
   data: {
-    blockchain: string,
-    cg: string,
-    web: string,
-    ml: string,
-    cloud: string,
-    processing: string,
-    ar: string,
-    document: string,
-    background: string,
+    profile: string,
     person: string
   }
 }
 
 export default ({ data }: Props) => (
   <>
-    <Header />
-    <TopScene />
-    <BlockchainScene />
-    <XRScene />
-    <ProfileScene images={data.profile.childImageSharp.fixed} />
+    <nav>
+      <a href="#1">1</a>
+      <a href="#2">2</a>
+      <a href="#3">3</a>
+    </nav>
+
+    <div className="scrolling-box">
+      <Header />
+      <section id="1">
+        <TopScene />
+      </section>
+      <section id="2">
+        <BlockchainScene />
+      </section>
+      <section id="3">
+        <XRScene />
+      </section>
+      <ProfileScene images={data.profile.childImageSharp.fixed} />
+    </div>
+
   </>
 )
 

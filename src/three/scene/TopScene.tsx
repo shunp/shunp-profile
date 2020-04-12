@@ -1,5 +1,13 @@
 import React, { useEffect, createRef } from 'react'
 import * as THREE from 'three'
+import ArrowDown from '../../../assets/arrow_down.svg'
+import { css } from "@emotion/core"
+
+const arrowStyle = css`
+  width:100%;
+  height: 50px;
+  viewBox:0 0 20 10;
+`
 
 const createDefaultCamera = () => {
   const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
@@ -125,6 +133,9 @@ const TopScene = () => {
             <p className="font-bold text-6xl text-purple-300 pt-48">SHUMPEI KOIKE</p>
             <p className="text-2xl text-gray-500">Software Developer</p>
             <p className="text-2xl text-gray-500">Researcher for Digital World</p>
+            <a href="#2" className="max-w-md mx-auto">
+              <ArrowDown css={arrowStyle} className="mt-40" />
+            </a>
           </div>
         </div>
       </div>
