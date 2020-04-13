@@ -1,8 +1,17 @@
 import React, { useEffect, createRef } from 'react'
 import * as THREE from 'three'
+import { css } from "@emotion/core"
+
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js'
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js'
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js'
+import WhiteArrowDown from '../../../assets/arrow_down_white.svg'
+
+const arrowStyle = css`
+  width:100%;
+  height: 50px;
+  viewBox:0 0 20 10;
+`
 
 const createDefaultCamera = () => {
   const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 10000)
@@ -128,6 +137,9 @@ const BlockchainScene = () => {
             <p className="font-bold text-6xl text-yellow-500 pt-48">BLOCKCHAIN</p>
             <p className="text-2xl text-gray-500">Decentralized Application</p>
             <p className="text-2xl text-gray-500">Tokenization</p>
+            <a href="#3" className="max-w-md mx-auto">
+              <WhiteArrowDown fill-opacity="0.5" css={arrowStyle} className="mt-48" />
+            </a>
           </div>
         </div>
       </div>

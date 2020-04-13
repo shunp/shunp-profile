@@ -1,7 +1,8 @@
 import React, { useEffect, createRef } from 'react'
 import * as THREE from 'three'
-import ArrowDown from '../../../assets/arrow_down.svg'
 import { css } from "@emotion/core"
+
+import ArrowDown from '../../../assets/arrow_down.svg'
 
 const arrowStyle = css`
   width:100%;
@@ -134,7 +135,7 @@ const TopScene = () => {
             <p className="text-2xl text-gray-500">Software Developer</p>
             <p className="text-2xl text-gray-500">Researcher for Digital World</p>
             <a href="#2" className="max-w-md mx-auto">
-              <ArrowDown css={arrowStyle} className="mt-40" />
+              <ArrowDown fill-opacity="0.5" css={arrowStyle} className="mt-48" />
             </a>
           </div>
         </div>

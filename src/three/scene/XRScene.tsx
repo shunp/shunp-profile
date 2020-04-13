@@ -4,6 +4,13 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { Water } from 'three/examples/jsm/objects/Water.js'
 import { Sky } from 'three/examples/jsm/objects/Sky.js'
+import ArrowDown from '../../../assets/arrow_down.svg'
+
+const arrowStyle = css`
+  width:100%;
+  height: 50px;
+  viewBox:0 0 20 10;
+`
 
 const createDefaultCamera = () => {
   const camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 1, 20000)
@@ -150,6 +157,9 @@ const XRScene = () => {
             <p className="font-bold text-6xl text-gray-800 pt-48">XR</p>
             <p className="text-2xl text-gray-800">3D Computer Graphics</p>
             <p className="text-2xl text-gray-800">Virtual / Augmented Reality </p>
+            <a href="#4" className="max-w-md mx-auto">
+              <ArrowDown fill-opacity="0.5" css={arrowStyle} className="mt-48" />
+            </a>
           </div>
         </div>
       </div>

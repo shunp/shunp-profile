@@ -5,6 +5,7 @@ import TopScene from '../three/scene/TopScene'
 import BlockchainScene from "../three/scene/BlockchainScene"
 import XRScene from "../three/scene/XRScene"
 import ProfileScene from "../three/scene/ProfileScene"
+import PortfolioScene from '../three/scene/PortfolioScene'
 import "../styles/base.css"
 interface Props {
   data: {
@@ -15,12 +16,6 @@ interface Props {
 
 export default ({ data }: Props) => (
   <>
-    <nav>
-      <a href="#1">1</a>
-      <a href="#2">2</a>
-      <a href="#3">3</a>
-    </nav>
-
     <div className="scrolling-box">
       <Header />
       <section id="1">
@@ -32,7 +27,12 @@ export default ({ data }: Props) => (
       <section id="3">
         <XRScene />
       </section>
-      <ProfileScene images={data.profile.childImageSharp.fixed} />
+      <section id="4">
+        <PortfolioScene images={data.book.childImageSharp.fixed} />
+      </section>
+      <section id="5">
+        <ProfileScene images={data.profile.childImageSharp.fixed} />
+      </section>
     </div>
 
   </>
@@ -54,5 +54,12 @@ export const query = graphql`
           }
         }
     }
+    book:file(relativePath: { eq: "book.jpg" }) {
+      childImageSharp {
+        fixed(width: 500, height: 650) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+  }
 }
 `
