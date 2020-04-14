@@ -150,16 +150,31 @@ const XRScene = () => {
   }, [])
   return (
     <>
-      <div className="absolute right-0 z-20 w-1/3 h-full">
-        <div className="flex flex-wrap h-full">
-          <div className="w-1/12 h-full" />
-          <div className="w-11/12 h-full">
-            <p className="font-bold text-6xl text-gray-800 pt-48">XR</p>
-            <p className="text-2xl text-gray-800">3D Computer Graphics</p>
-            <p className="text-2xl text-gray-800">Virtual / Augmented Reality </p>
-            <a href="#4" className="max-w-md mx-auto">
-              <ArrowDown fill-opacity="0.5" css={arrowStyle} className="mt-48" />
-            </a>
+      <div className="absolute z-20 w-full h-full">
+        <div className="px-8 py-12 max-w-md mx-auto h-full">
+          <div className="flex content-between flex-wrap h-full">
+            <div className="w-full">
+              <p className="py-3 font-bold text-4xl text-green-200 ">X Reality</p>
+              <p className="text-xl text-green-300">Enables us to feel as if this world becomes a Sci-Fi movie.</p>
+            </div>
+            <div className="w-full">
+              <p className="text-xl text-green-300">AR and VR melts our boundary between virtual and real.</p>
+            </div>
+          </div>
+        </div>
+        <div className="hidden xl:block">
+          <div className="absolute right-0 z-20 w-1/3 h-full">
+            <div className="flex flex-wrap h-full">
+              <div className="w-1/12 h-full" />
+              <div className="w-11/12 h-full">
+                <p className="font-bold text-6xl text-gray-800 pt-48">XR</p>
+                <p className="text-2xl text-gray-800">3D Computer Graphics</p>
+                <p className="text-2xl text-gray-800">Virtual / Augmented Reality </p>
+                <a href="#4" className="max-w-md mx-auto">
+                  <ArrowDown fill-opacity="0.5" css={arrowStyle} className="mt-48" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

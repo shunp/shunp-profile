@@ -83,23 +83,22 @@ const PortfolioScene = (props) => {
   return (
     <>
       <div className="absolute z-20 w-full h-full">
-        <div className="flex content-center flex-wrap h-48">
-          <div className="w-1/2 p-2 h-48 max-w-md mx-auto">
-            <iframe id="ytplayer" type="text/html" width="640" height="360"
-              src="https://www.youtube.com/embed/WlkWTye4mfI"
-              frameborder="0"></iframe>
-            <div>
-              <p className="text-2xl">AWS Best Architecture 2018</p>
+        <div className="px-8 py-12 max-w-md mx-auto h-full">
+          <div className="flex content-between flex-wrap h-full">
+            <div className="w-full">
+              <p className="py-3 font-bold text-2xl text-grey-600">Personal Activity</p>
+            </div>
+            <div className="w-full">
+              <iframe id="ytplayer" type="text/html" width="300" height="200"
+                src="https://www.youtube.com/embed/WlkWTye4mfI"
+                frameborder="0"></iframe>
+              <p className="text-lg text-center text-gray-500">AWS Best Architecture 2018</p>
+            </div>
+            <div className="w-full">
+              <Img fluid={props.images} className="bg-no-repeat content-center w-full h-full" />
+              <p className="text-lg text-center text-gray-500">Published technical book in 2019</p>
             </div>
           </div>
-          <div className="w-1/2 p-2 h-48 max-w-md mx-auto">
-            <Img fixed={props.images} className="bg-no-repeat content-center bg-gray-400 w-24 h-24" />
-            <div>
-              <p className="text-2xl">Published Book</p>
-            </div>
-          </div>
-
-
         </div>
       </div>
 

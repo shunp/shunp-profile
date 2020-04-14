@@ -130,16 +130,29 @@ const BlockchainScene = () => {
   }, [])
   return (
     <>
-      <div className="absolute z-20 w-1/2 h-full">
-        <div className="flex flex-wrap h-full">
-          <div className="w-1/12 h-full" />
-          <div className="w-11/12 h-full">
-            <p className="font-bold text-6xl text-yellow-500 pt-48">BLOCKCHAIN</p>
-            <p className="text-2xl text-gray-500">Decentralized Application</p>
-            <p className="text-2xl text-gray-500">Tokenization</p>
-            <a href="#3" className="max-w-md mx-auto">
-              <WhiteArrowDown fill-opacity="0.5" css={arrowStyle} className="mt-48" />
-            </a>
+      <div className="absolute z-20 w-full h-full">
+        <div className="px-8 py-12 max-w-md mx-auto h-full">
+          <div className="flex content-between flex-wrap h-full">
+            <div className="w-full">
+              <p className="py-3 font-bold text-4xl text-yellow-500">BLOCKCHAIN</p>
+              <p className="text-2xl text-gray-500">Enables data to be decentralized and transparency.</p>
+            </div>
+            <div className="w-full">
+              <p className="text-2xl text-gray-500">All data on the blockchain will have a value as an real asset.</p>
+            </div>
+          </div>
+        </div>
+        <div className="hidden xl:block">
+          <div className="flex flex-wrap h-full">
+            <div className="w-1/12 h-full" />
+            <div className="w-11/12 h-full">
+              <p className="font-bold text-6xl text-yellow-500 pt-48">BLOCKCHAIN</p>
+              <p className="text-2xl text-gray-500">Decentralized Application</p>
+              <p className="text-2xl text-gray-500">Tokenization</p>
+              <a href="#3" className="max-w-md mx-auto">
+                <WhiteArrowDown fill-opacity="0.5" css={arrowStyle} className="mt-48" />
+              </a>
+            </div>
           </div>
         </div>
       </div>

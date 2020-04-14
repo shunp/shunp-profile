@@ -28,10 +28,10 @@ export default ({ data }: Props) => (
         <XRScene />
       </section>
       <section id="4">
-        <PortfolioScene images={data.book.childImageSharp.fixed} />
+        <PortfolioScene images={data.book.childImageSharp.fluid} />
       </section>
       <section id="5">
-        <ProfileScene images={data.profile.childImageSharp.fixed} />
+        <ProfileScene images={data.profile.childImageSharp.fluid} />
       </section>
     </div>
 
@@ -42,8 +42,8 @@ export const query = graphql`
   query {
     profile:file(relativePath: { eq: "profile.jpg" }) {
       childImageSharp {
-        fixed(width: 400, height: 300) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
@@ -56,8 +56,8 @@ export const query = graphql`
     }
     book:file(relativePath: { eq: "book.jpg" }) {
       childImageSharp {
-        fixed(width: 500, height: 650) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
         }
       }
   }

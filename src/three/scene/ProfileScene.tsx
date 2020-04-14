@@ -133,18 +133,16 @@ const ProfileScene = (props) => {
   return (
     <>
       <div className="absolute z-20 w-full h-full">
-        <div className="flex content-center flex-wrap h-48">
-          <div className="w-1/3 p-2 h-48">
+        <div className="px-8 py-12 max-w-md mx-auto h-full">
+          <div className="flex content-around flex-wrap h-full">
+            <div className="w-full">
+              <p className="py-3 font-bold text-2xl text-purple-400">Contact</p>
+              <Img fluid={props.images} css={profileFrame} className="bg-no-repeat content-center w-full h-full" />
+            </div>
           </div>
-          <div className="w-1/3 pt-48 h-48 max-w-md mx-auto">
-            <Img fixed={props.images} css={profileFrame} className="bg-no-repeat content-center bg-gray-400 w-24 h-24" />
-          </div>
-          <div className="w-1/3 p-2 h-48">
-          </div>
+
         </div>
-        <div className="pt-48" />
-        <div className="pt-12" />
-        <div className="flex content-center flex-wrap h-48 pt-48">
+        <div className="flex content-center flex-wrap">
           <div className="w-1/12 p-2" />
           <div className="w-1/12 p-2" />
           <a className="w-1/12 p-2" target="_blank" href="https://www.linkedin.com/in/%E9%A7%BF%E5%B9%B3-%E5%B0%8F%E6%B1%A0-24aa4a161/?locale=en_US">
