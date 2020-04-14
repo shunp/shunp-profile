@@ -124,19 +124,43 @@ const TopScene = () => {
     defaultAminatin(icosahedron, scene, camera, renderer)
     defaultAminatin(outerIcosahedron, scene, camera, renderer)
     defaultAminatin(particles, scene, camera, renderer)
+
+    // listener
+    const onWindowResize = () => {
+      camera.aspect = window.innerWidth / window.innerHeight
+      camera.updateProjectionMatrix()
+      renderer.setSize(window.innerWidth, window.innerHeight)
+    }
+    window.addEventListener('resize', onWindowResize)
   }, [])
   return (
     <>
       <div className="absolute z-20 w-full h-full">
-        <div className="flex flex-wrap h-full">
-          <div className="w-7/12 h-full" />
-          <div className="w-5/12 h-full">
-            <p className="font-bold text-6xl text-purple-300 pt-48">SHUMPEI KOIKE</p>
-            <p className="text-2xl text-gray-500">Software Developer</p>
-            <p className="text-2xl text-gray-500">Researcher for Digital World</p>
-            <a href="#2" className="max-w-md mx-auto">
-              <ArrowDown fill-opacity="0.5" css={arrowStyle} className="mt-48" />
-            </a>
+        <div className="px-8 py-12 max-w-md mx-auto h-full">
+          <div className="flex content-between flex-wrap h-full">
+            <div className="w-full">
+              <p className="py-3 font-bold text-2xl text-purple-300">Another Life by Virtual Story</p>
+              <p className="text-xl text-gray-500">What if we can live in another story as if it is real?</p>
+            </div>
+            <div className="w-full">
+              <p className="text-xl text-gray-500">Developed by</p>
+              <p className="py-3 font-bold text-2xl text-purple-300">SHUMPEI KOIKE</p>
+              <p className="text-xl text-gray-500">Software Developer</p>
+              <p className="text-xl text-gray-500">Researcher for Digital World</p>
+            </div>
+          </div>
+        </div>
+        <div className="hidden xl:block">
+          <div className="flex flex-wrap h-full">
+            <div className="w-7/12 h-full" />
+            <div className="w-5/12 h-full">
+              <p className="font-bold text-6xl text-purple-300 pt-48">SHUMPEI KOIKE</p>
+              <p className="text-2xl text-gray-500">Software Developer</p>
+              <p className="text-2xl text-gray-500">Researcher for Digital World</p>
+              <a href="#2" className="max-w-md mx-auto">
+                <ArrowDown fill-opacity="0.5" css={arrowStyle} className="mt-48" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
