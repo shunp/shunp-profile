@@ -86,7 +86,7 @@ const PortfolioScene = (props) => {
         <div className="px-8 py-12 max-w-md mx-auto h-full">
           <div className="flex content-between flex-wrap h-full">
             <div className="w-full">
-              <p className="py-3 font-bold text-2xl text-grey-600">Personal Activity</p>
+              <p className="py-3 font-bold text-2xl text-purple-400">Personal Activity</p>
             </div>
             <div className="w-full">
               <iframe id="ytplayer" type="text/html" width="300" height="200"

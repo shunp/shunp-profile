@@ -14,7 +14,7 @@ const arrowStyle = css`
 
 const createDefaultCamera = () => {
   const camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 1, 20000)
-  camera.position.set(30, 30, 100)
+  camera.position.set(30, 30, 200)
   return camera
 }
 
@@ -150,15 +150,15 @@ const XRScene = () => {
   }, [])
   return (
     <>
-      <div className="absolute z-20 w-full h-full">
-        <div className="px-8 py-12 max-w-md mx-auto h-full">
+      <div className="absolute z-20 md:w-1/2 w-full h-full">
+        <div className="px-8 py-12 max-w-lg mx-auto h-full">
           <div className="flex content-between flex-wrap h-full">
             <div className="w-full">
-              <p className="py-3 font-bold text-4xl text-green-200 ">X Reality</p>
-              <p className="text-xl text-green-300">Enables us to feel as if this world becomes a Sci-Fi movie.</p>
+              <p className="py-3 font-bold text-4xl text-red-700 ">X Reality</p>
+              <p className="text-xl text-red-600">enables us to feel as if this world becomes a Sci-Fi movie.</p>
             </div>
             <div className="w-full">
-              <p className="text-xl text-green-300">AR and VR melts our boundary between virtual and real.</p>
+              <p className="text-xl text-red-600">AR and VR melts our boundary between virtual and real.</p>
             </div>
           </div>
         </div>

@@ -136,14 +136,13 @@ const TopScene = () => {
   return (
     <>
       <div className="absolute z-20 w-full h-full">
-        <div className="px-8 py-12 max-w-md mx-auto h-full">
+        <div className="px-8 py-12 max-w-lg mx-auto h-full">
           <div className="flex content-between flex-wrap h-full">
             <div className="w-full">
-              <p className="py-3 font-bold text-2xl text-purple-300">Another Life by Virtual Story</p>
+              <p className="py-3 font-bold text-2xl md:text-3xl text-purple-300">Another Life by Virtual Story</p>
               <p className="text-xl text-gray-500">What if we can live in another story as if it is real?</p>
             </div>
             <div className="w-full">
-              <p className="text-xl text-gray-500">Developed by</p>
               <p className="py-3 font-bold text-2xl text-purple-300">SHUMPEI KOIKE</p>
               <p className="text-xl text-gray-500">Software Developer</p>
               <p className="text-xl text-gray-500">Researcher for Digital World</p>
