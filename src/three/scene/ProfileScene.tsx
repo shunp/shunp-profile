@@ -133,44 +133,47 @@ const ProfileScene = (props) => {
   return (
     <>
       <div className="absolute z-20 w-full h-full">
-        <div className="px-8 py-12 max-w-md mx-auto h-full">
-          <div className="flex content-around flex-wrap h-full">
+        <div className="px-8 py-12 max-w-lg mx-auto h-full">
+          <div className="flex content-between flex-wrap h-full">
             <div className="w-full">
-              <p className="py-3 font-bold text-2xl text-purple-400">Contact</p>
-              <Img fluid={props.images} css={profileFrame} className="bg-no-repeat content-center w-full h-full" />
+              <p className="py-3 font-bold text-2xl text-purple-600">Profile</p>
+              <Img fluid={props.images} css={profileFrame} className="bg-no-repeat content-center w-full h-48" />
+              <p className="py-3 font-bold text-2xl text-gray-600">Shumpei Koike / 小池 駿平</p>
+              <p className="py-3 font-bold text-lg text-gray-600">Software developer </p>
+              <p className="text-gray-500">After graduating from Tokyo University of Science, started working in Simplex.Inc and developed some financial services, such as DMMBitcoin, and TaoTao(YahooJapan). He got the fastest promotion in the history of the company, and became COE of Development. In 2018, a system he designed as a development lead was awarded by Amazon as the best architecture, which was first Japanese in the financial industry. After being self-employed, he's been working as a freelance developer and digging into his vision.</p>
             </div>
+            <div className="w-full">
+              <div className="flex content-center flex-wrap">
+
+                <a className="w-1/4 p-2" target="_blank" href="https://www.linkedin.com/in/%E9%A7%BF%E5%B9%B3-%E5%B0%8F%E6%B1%A0-24aa4a161/?locale=en_US">
+                  <Linkedin className="hover:bg-gray-400 focus:outline-none" />
+                </a>
+                <a className="w-1/4 p-2" target="_blank" href="https://www.facebook.com/shunpei.koike.9">
+                  <Facebook className="hover:bg-gray-400 focus:outline-none" />
+                </a>
+                <a className="w-1/4 p-2" target="_blank" href="https://twitter.com/shunpei42ba_">
+                  <Twitter className="hover:bg-gray-400 focus:outline-none" />
+                </a>
+                <a className="w-1/4 p-2" target="_blank" href="https://www.youtube.com/watch?v=WlkWTye4mfI&t=1s">
+                  <Youtube className="hover:bg-gray-400 focus:outline-none" />
+                </a>
+                <a className="w-1/4 p-2" target="_blank" href="https://www.instagram.com/shunpeikoike/">
+                  <Instagram className="hover:bg-gray-400 focus:outline-none" />
+                </a>
+                <a className="w-1/4 p-2" target="_blank" href="https://github.com/shunp">
+                  <GitHub className="hover:bg-gray-400 focus:outline-none" />
+                </a>
+                <a className="w-1/4 p-2" target="_blank" href="https://qiita.com/shunp">
+                  <Qiita className="hover:bg-gray-400 focus:outline-none" />
+                </a>
+                <a className="w-1/4 p-2" target="_blank" href="https://speakerdeck.com/shunp">
+                  <Speakerdeck className="hover:bg-gray-400 focus:outline-none" />
+                </a>
+              </div>
+            </div>
+
           </div>
 
-        </div>
-        <div className="flex content-center flex-wrap">
-          <div className="w-1/12 p-2" />
-          <div className="w-1/12 p-2" />
-          <a className="w-1/12 p-2" target="_blank" href="https://www.linkedin.com/in/%E9%A7%BF%E5%B9%B3-%E5%B0%8F%E6%B1%A0-24aa4a161/?locale=en_US">
-            <Linkedin className="hover:bg-gray-400 focus:outline-none shadow-lg" />
-          </a>
-          <a className="w-1/12 p-2" target="_blank" href="https://www.facebook.com/shunpei.koike.9">
-            <Facebook className="hover:bg-gray-400 focus:outline-none shadow-lg" />
-          </a>
-          <a className="w-1/12 p-2" target="_blank" href="https://twitter.com/shunpei42ba_">
-            <Twitter className="hover:bg-gray-400 focus:outline-none shadow-lg" />
-          </a>
-          <a className="w-1/12 p-2" target="_blank" href="https://www.youtube.com/watch?v=WlkWTye4mfI&t=1s">
-            <Youtube className="hover:bg-gray-400 focus:outline-none shadow-lg" />
-          </a>
-          <a className="w-1/12 p-2" target="_blank" href="https://www.instagram.com/shunpeikoike/">
-            <Instagram className="hover:bg-gray-400 focus:outline-none shadow-lg" />
-          </a>
-          <a className="w-1/12 p-2" target="_blank" href="https://github.com/shunp">
-            <GitHub className="hover:bg-gray-400 focus:outline-none shadow-lg" />
-          </a>
-          <a className="w-1/12 p-2" target="_blank" href="https://qiita.com/shunp">
-            <Qiita className="hover:bg-gray-400 focus:outline-none shadow-lg" />
-          </a>
-          <a className="w-1/12 p-2" target="_blank" href="https://speakerdeck.com/shunp">
-            <Speakerdeck className="hover:bg-gray-400 focus:outline-none shadow-lg" />
-          </a>
-          <div className="w-1/12 p-2" />
-          <div className="w-1/12 p-2" />
         </div>
       </div>
 

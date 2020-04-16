@@ -15,7 +15,7 @@ const arrowStyle = css`
 
 const createDefaultCamera = () => {
   const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 10000)
-  camera.position.z = 1500
+  camera.position.z = 2000
   return camera
 }
 

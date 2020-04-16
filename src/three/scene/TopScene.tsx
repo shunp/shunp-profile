@@ -140,7 +140,7 @@ const TopScene = () => {
           <div className="flex content-between flex-wrap h-full">
             <div className="w-full">
               <p className="py-3 font-bold text-2xl md:text-3xl text-purple-300">Another Life by Virtual Story</p>
-              <p className="text-xl text-gray-500">What if we can live in another story as if it is real?</p>
+              <p className="text-xl text-gray-500">What if we can live in another story as if it is real? This system provides not only the virtual experience but also the second real story.</p>
             </div>
             <div className="w-full">
               <p className="py-3 font-bold text-2xl text-purple-300">SHUMPEI KOIKE</p>
