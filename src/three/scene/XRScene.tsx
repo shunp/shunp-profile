@@ -162,7 +162,7 @@ const XRScene = () => {
             </div>
           </div>
         </div>
-        <div className="hidden xl:block">
+        {/* <div className="hidden xl:block">
           <div className="absolute right-0 z-20 w-1/3 h-full">
             <div className="flex flex-wrap h-full">
               <div className="w-1/12 h-full" />
@@ -176,7 +176,7 @@ const XRScene = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="z-10" ref={mount} />
     </>

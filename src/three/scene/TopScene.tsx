@@ -149,7 +149,7 @@ const TopScene = () => {
             </div>
           </div>
         </div>
-        <div className="hidden xl:block">
+        {/* <div className="hidden xl:block">
           <div className="flex flex-wrap h-full">
             <div className="w-7/12 h-full" />
             <div className="w-5/12 h-full">
@@ -160,8 +160,8 @@ const TopScene = () => {
                 <ArrowDown fill-opacity="0.5" css={arrowStyle} className="mt-48" />
               </a>
             </div>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
       </div>
       <div className="z-10" ref={mount} />
     </>

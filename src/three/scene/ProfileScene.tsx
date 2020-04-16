@@ -143,8 +143,7 @@ const ProfileScene = (props) => {
               <p className="text-gray-500">After graduating from Tokyo University of Science, started working in Simplex.Inc and developed some financial services, such as DMMBitcoin, and TaoTao(YahooJapan). He got the fastest promotion in the history of the company, and became CoE in the dev section. In 2018, a system he designed as a development lead was awarded by Amazon as the best architecture, which was first Japanese in the financial industry. After being self-employed, he's been working as a freelance developer and digging into his vision to realize the system above.</p>
             </div>
             <div className="w-full">
-              <div className="flex content-center flex-wrap">
-
+              <div className="flex content-center flex-wrap pt-3">
                 <a className="w-1/4 p-2" target="_blank" href="https://www.linkedin.com/in/%E9%A7%BF%E5%B9%B3-%E5%B0%8F%E6%B1%A0-24aa4a161/?locale=en_US">
                   <Linkedin className="hover:bg-gray-400 focus:outline-none" />
                 </a>

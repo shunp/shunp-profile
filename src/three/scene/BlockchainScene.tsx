@@ -142,7 +142,7 @@ const BlockchainScene = () => {
             </div>
           </div>
         </div>
-        <div className="hidden xl:block">
+        {/* <div className="hidden xl:block">
           <div className="flex flex-wrap h-full">
             <div className="w-1/12 h-full" />
             <div className="w-11/12 h-full">
@@ -154,7 +154,7 @@ const BlockchainScene = () => {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="z-10" ref={mount} />
     </>
