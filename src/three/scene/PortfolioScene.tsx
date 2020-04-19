@@ -51,6 +51,14 @@ const PortfolioScene = (props) => {
     light4.add(new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({ color: 0xffaa00 })))
     scene.add(light4)
 
+    // listener
+    const onWindowResize = () => {
+      camera.aspect = window.innerWidth / window.innerHeight
+      camera.updateProjectionMatrix()
+      renderer.setSize(window.innerWidth, window.innerHeight)
+    }
+    window.addEventListener('resize', onWindowResize)
+
     // animation
     const render = () => {
       const time = Date.now() * 0.0005
@@ -83,18 +91,31 @@ const PortfolioScene = (props) => {
   return (
     <>
       <div className="absolute z-20 w-full h-full">
-        <div className="px-8 py-12 max-w-md mx-auto h-full">
+        <div className="px-8 py-12 max-w-full mx-auto h-full">
           <div className="flex content-between flex-wrap h-full">
             <div className="w-full">
               <p className="py-3 font-bold text-2xl text-purple-400">Personal Activity</p>
             </div>
             <div className="w-full">
-              <iframe id="ytplayer" type="text/html" width="300" height="200"
-                src="https://www.youtube.com/embed/WlkWTye4mfI"
-                frameborder="0"></iframe>
-              <p className="text-lg text-center text-gray-500">AWS Best Architecture 2018</p>
+              <div className="flex content-center flex-wrap pt-3">
+                <div className="md:w-5/12">
+                  <iframe className="md:hidden" title="AWS" id="ytplayer" type="text/html" width="310" height="200"
+                    src="https://www.youtube.com/embed/WlkWTye4mfI"
+                    frameborder="0"></iframe>
+                  <iframe className="hidden md:block pt-3" title="AWS" id="ytplayer" type="text/html" width="510" height="350"
+                    src="https://www.youtube.com/embed/WlkWTye4mfI"
+                    frameborder="0"></iframe>
+                  <p className="text-lg text-center text-gray-500">AWS Best Architecture 2018</p>
+                </div>
+                <div className="md:w-2/12" />
+                <div className="md:w-4/12">
+                  <Img fluid={props.images} className="bg-no-repeat content-center w-full h-full" />
+                  <p className="text-lg text-center text-gray-500">Published technical book in 2019</p>
+                </div>
+                <div className="md:w-1/12" />
+              </div>
             </div>
-            <div className="w-full">
+            <div className="md:hidden w-full">
               <Img fluid={props.images} className="bg-no-repeat content-center w-full h-full" />
               <p className="text-lg text-center text-gray-500">Published technical book in 2019</p>
             </div>

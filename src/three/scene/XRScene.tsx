@@ -134,6 +134,14 @@ const XRScene = () => {
     controls.maxDistance = 200.0
     controls.update()
 
+    // listener
+    const onWindowResize = () => {
+      camera.aspect = window.innerWidth / window.innerHeight
+      camera.updateProjectionMatrix()
+      renderer.setSize(window.innerWidth, window.innerHeight)
+    }
+    window.addEventListener('resize', onWindowResize)
+
     const render = () => {
       const time = performance.now() * 0.001
       sphere.position.y = Math.sin(time) * 20 + 5

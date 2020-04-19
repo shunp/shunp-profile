@@ -101,6 +101,14 @@ const ProfileScene = (props) => {
     light4.add(new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({ color: 0xffaa00 })))
     scene.add(light4)
 
+    // listener
+    const onWindowResize = () => {
+      camera.aspect = window.innerWidth / window.innerHeight
+      camera.updateProjectionMatrix()
+      renderer.setSize(window.innerWidth, window.innerHeight)
+    }
+    window.addEventListener('resize', onWindowResize)
+
     // animation
     const render = () => {
       const time = Date.now() * 0.0005
@@ -140,7 +148,7 @@ const ProfileScene = (props) => {
               <Img fluid={props.images} css={profileFrame} className="bg-no-repeat content-center w-full h-48" />
               <p className="py-3 font-bold text-2xl text-gray-600">Shumpei Koike / 小池 駿平</p>
               <p className="py-3 font-bold text-lg text-gray-600">Software developer </p>
-              <p className="text-gray-500">After graduating from Tokyo University of Science, started working in Simplex.Inc and developed some financial services, such as DMMBitcoin, and TaoTao(YahooJapan). He got the fastest promotion in the history of the company, and became CoE in the dev section. In 2018, a system he designed as a development lead was awarded by Amazon as the best architecture, which was first Japanese in the financial industry. After being self-employed, he's been working as a freelance developer and digging into his vision to realize the system above.</p>
+              <p className="text-gray-500">After graduating from Tokyo University of Science, started working in Simplex.Inc and developed some financial services, such as DMMBitcoin, and TaoTao(YahooJapan). He got the fastest promotion in the history of the company, and became CoE in the dev section. In 2018, a system he designed as a development lead was awarded by Amazon as the best architecture, which was first Japanese in the financial industry. After being self-employed, he's been working as a freelance developer and digging into his vision to realize the system above, traveling around the world.</p>
             </div>
             <div className="w-full">
               <div className="flex content-center flex-wrap pt-3">
