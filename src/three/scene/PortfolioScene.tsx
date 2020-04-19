@@ -98,24 +98,24 @@ const PortfolioScene = (props) => {
             </div>
             <div className="w-full">
               <div className="flex content-center flex-wrap pt-3">
-                <div className="md:w-5/12">
-                  <iframe className="md:hidden" title="AWS" id="ytplayer" type="text/html" width="310" height="200"
+                <div className="sm:w-5/12 md:w-5/12 lg:w-5/12 xl:w-5/12">
+                  <iframe className="sm:hidden md:hidden lg:hidden lg:hidden " title="AWS" id="ytplayer" type="text/html" width="310" height="200"
                     src="https://www.youtube.com/embed/WlkWTye4mfI"
                     frameborder="0"></iframe>
-                  <iframe className="hidden md:block pt-3" title="AWS" id="ytplayer" type="text/html" width="510" height="350"
+                  <iframe className="hidden sm:block md:block lg:block xl:block pt-3" title="AWS" id="ytplayer" type="text/html" width="510" height="350"
                     src="https://www.youtube.com/embed/WlkWTye4mfI"
                     frameborder="0"></iframe>
                   <p className="text-lg text-center text-gray-500">AWS Best Architecture 2018</p>
                 </div>
-                <div className="md:w-2/12" />
-                <div className="md:w-4/12">
-                  <Img fluid={props.images} className="bg-no-repeat content-center w-full h-full" />
+                <div className="sm:w-2/12 md:w-2/12 lg:w-2/12 xl:w-2/12" />
+                <div className="sm:w-4/12 md:w-4/12 lg:w-4/12 xl:w-4/12">
+                  <Img fluid={props.images} className="hidden sm:block md:block lg:block xl:block" />
                   <p className="text-lg text-center text-gray-500">Published technical book in 2019</p>
                 </div>
-                <div className="md:w-1/12" />
+                <div className="sm:w-1/12 md:w-1/12 lg:w-1/12 xl:w-1/12" />
               </div>
             </div>
-            <div className="md:hidden w-full">
+            <div className="sm:hidden md:hidden lg:hidden xl:hidden w-full">
               <Img fluid={props.images} className="bg-no-repeat content-center w-full h-full" />
               <p className="text-lg text-center text-gray-500">Published technical book in 2019</p>
             </div>
