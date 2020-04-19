@@ -144,9 +144,8 @@ const ProfileScene = (props) => {
         <div className="px-8 py-12 max-w-lg mx-auto h-full">
           <div className="flex content-between flex-wrap h-full">
             <div className="w-full">
-              <p className="py-3 font-bold text-2xl text-purple-600">Profile</p>
               <Img fluid={props.images} css={profileFrame} className="bg-no-repeat content-center w-full h-48" />
-              <p className="py-3 font-bold text-2xl text-gray-600">Shumpei Koike / 小池 駿平</p>
+              <p className="md:py-3 font-bold text-2xl text-gray-600">Shumpei Koike / 小池 駿平</p>
               <p className="py-3 font-bold text-lg text-gray-600">Software developer </p>
               <p className="text-gray-500">After graduating from Tokyo University of Science, started working in Simplex.Inc and developed some financial services, such as DMMBitcoin, and TaoTao(YahooJapan). He got the fastest promotion in the history of the company, and became CoE in the dev section. In 2018, a system he designed as a development lead was awarded by Amazon as the best architecture, which was first Japanese in the financial industry. After being self-employed, he's been working as a freelance developer and digging into his vision to realize the system above, traveling around the world.</p>
             </div>
