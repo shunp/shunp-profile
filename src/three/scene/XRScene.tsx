@@ -4,7 +4,7 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { Water } from 'three/examples/jsm/objects/Water.js'
 import { Sky } from 'three/examples/jsm/objects/Sky.js'
-import ArrowDown from '../../../assets/arrow_down.svg'
+import WhiteArrowDown from '../../../assets/arrow_down_white.svg'
 
 const arrowStyle = css`
   width:100%;
@@ -132,7 +132,7 @@ const XRScene = () => {
     controls.target.set(0, 10, 0)
     controls.minDistance = 40.0
     controls.maxDistance = 200.0
-    controls.update()
+    controls.autoRotate = true
 
     // listener
     const onWindowResize = () => {
@@ -148,6 +148,10 @@ const XRScene = () => {
       sphere.rotation.x = time * 0.5
       sphere.rotation.z = time * 0.51
       water.material.uniforms.time.value += 1.0 / 60.0
+
+      // scene.rotation.y += 1
+      controls.update()
+
       renderer.render(scene, camera)
     }
     const animate = () => {
@@ -163,10 +167,15 @@ const XRScene = () => {
           <div className="flex content-between flex-wrap h-full">
             <div className="w-full">
               <p className="py-3 font-bold text-4xl text-red-700 ">X Reality</p>
-              <p className="text-xl text-red-600">enables us to feel as if this world becomes a Sci-Fi movie.</p>
+              <p className="text-2xl text-red-700">enables us to feel as if this world becomes a Sci-Fi world.</p>
+              <p className="py-3 text-xl text-red-700">By using WebGL and JavaScript libraries, we can construct 3D objects that is programable, which means we can generate whatever you want according to the parameters in real time.</p>
+              <p className="py-3 text-xl text-red-700">Thus, the world can be created interactively when some actions from users happen.</p>
             </div>
             <div className="w-full">
-              <p className="text-xl text-red-600">AR and VR melts our boundary between virtual and real.</p>
+              <p className="text-xl text-red-600">In this system, the data based on the blockchain can be represented as a 3D object on VR decices or web pages, and be exposed to the real world with AR.</p>
+              <a href="#4" className="">
+                <WhiteArrowDown fill-opacity="0.1" css={arrowStyle} className="" />
+              </a>
             </div>
           </div>
         </div>

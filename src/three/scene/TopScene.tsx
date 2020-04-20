@@ -136,32 +136,24 @@ const TopScene = () => {
   return (
     <>
       <div className="absolute z-20 w-full h-full">
-        <div className="px-8 py-12 max-w-lg mx-auto h-full">
+        <div className="px-8 py-12 max-w-xl mx-auto h-full">
           <div className="flex content-between flex-wrap h-full">
             <div className="w-full">
               <p className="py-3 font-bold text-2xl md:text-3xl text-purple-300">Another Life by Virtual Story</p>
-              <p className="text-xl text-gray-500">What if we can live in another story as if it is real? This system provides not only the virtual experience but also the second real story.</p>
+              <p className="text-xl text-gray-500">What if we can live in another story as if it is real?</p>
+              <p className="py-2 text-xl text-gray-500">This is a portfolio site of an engieer who desires developing the second real story.</p>
             </div>
             <div className="w-full">
-              <p className="py-3 font-bold text-2xl text-purple-300">SHUMPEI KOIKE</p>
-              <p className="text-xl text-gray-500">Software Developer</p>
-              <p className="text-xl text-gray-500">Researcher for Digital World</p>
+              <p className="py-3 font-bold text-2xl text-purple-300">Three elements underlie the system</p>
+              <p className="text-xl text-gray-500">1. Blockchain</p>
+              <p className="text-xl text-gray-500">2. XR</p>
+              <p className="text-xl text-gray-500">3. Machine Learning</p>
+              <a href="#2" >
+                <ArrowDown fill-opacity="0.1" css={arrowStyle} className="" />
+              </a>
             </div>
           </div>
         </div>
-        {/* <div className="hidden xl:block">
-          <div className="flex flex-wrap h-full">
-            <div className="w-7/12 h-full" />
-            <div className="w-5/12 h-full">
-              <p className="font-bold text-6xl text-purple-300 pt-48">SHUMPEI KOIKE</p>
-              <p className="text-2xl text-gray-500">Software Developer</p>
-              <p className="text-2xl text-gray-500">Researcher for Digital World</p>
-              <a href="#2" className="max-w-md mx-auto">
-                <ArrowDown fill-opacity="0.5" css={arrowStyle} className="mt-48" />
-              </a>
-            </div>
-          </div> */}
-        {/* </div> */}
       </div>
       <div className="z-10" ref={mount} />
     </>

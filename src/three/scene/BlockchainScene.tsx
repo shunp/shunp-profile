@@ -136,25 +136,17 @@ const BlockchainScene = () => {
             <div className="w-full">
               <p className="py-3 font-bold text-4xl text-yellow-500">BLOCKCHAIN</p>
               <p className="text-2xl text-gray-500">enables data to be decentralized and transparency.</p>
+              <p className="py-3 text-xl text-gray-500">Once the data is saved into the blockchain, no one can change it. All data on the chain will permanently stored and we can access them from wherever according to their own privilege.</p>
+              <p className="py-3 text-xl text-gray-500">Thus, the storage can be materialized and have a value as a real asset.</p>
             </div>
             <div className="w-full">
-              <p className="text-2xl text-gray-500">All data on the blockchain will have a value as a real asset.</p>
-            </div>
-          </div>
-        </div>
-        {/* <div className="hidden xl:block">
-          <div className="flex flex-wrap h-full">
-            <div className="w-1/12 h-full" />
-            <div className="w-11/12 h-full">
-              <p className="font-bold text-6xl text-yellow-500 pt-48">BLOCKCHAIN</p>
-              <p className="text-2xl text-gray-500">Decentralized Application</p>
-              <p className="text-2xl text-gray-500">Tokenization</p>
-              <a href="#3" className="max-w-md mx-auto">
-                <WhiteArrowDown fill-opacity="0.5" css={arrowStyle} className="mt-48" />
+              <p className="text-xl text-gray-500">In this system, the private data is encrypted before being stored. Your steps saved in the system will be recoded as if you actually proceed to your goal.</p>
+              <a href="#3" className="">
+                <WhiteArrowDown fill-opacity="0.1" css={arrowStyle} className="" />
               </a>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
       <div className="z-10" ref={mount} />
     </>
